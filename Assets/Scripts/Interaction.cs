@@ -17,7 +17,6 @@ public class Interaction : MonoBehaviour
 
     // Paint Object
     GameObject paintObject;
-    public PaintScript paint;
 
     private void Update()
     {
@@ -104,8 +103,8 @@ public class Interaction : MonoBehaviour
         {
             Instantiate(bullet, hit.point, transform.rotation);
 
-            paintObject = hit.collider.gameObject;
-            paint = paintObject.GetComponent<PaintScript>();
+            paintObject = hit.collider.gameObject; 
+            PaintScript paint = paintObject.GetComponent<PaintScript>();
 
             paint.TakeDamage(1);
         }

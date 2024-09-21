@@ -5,7 +5,6 @@ using UnityEngine;
 public class PaintScript : MonoBehaviour
 {
     public int health = 3;
-    public int damage = 1;
     private Renderer objectRenderer;
     void Start()
     {
